@@ -1,0 +1,22 @@
+1. The command 'wc' prints the newline, word, and byte (character) counts. The -l flag has 'wc' print only the newline count.
+
+2. 157  200 7733 /etc/passwd
+
+3. One could use ctrl-c, athough for many interactive processes, 'exit' would suffice.
+
+4. This variable stores the location of the user's home directory.
+
+5. $PS1 and $PATH. $PS1 stores the text that makes up the prompt. $PATH stores the locations that bash looks for commands/executables when the user types and enters a command.
+
+6. Both 'locate' and 'find' would work, with 'locate' likely requiring the least amount of typing.
+
+7. The 'which' command prints the path(s) of the file(s) that would be executed were the passed command actually run. This is a different application from the previous command, in that for question 6 we already knew the filename (though not the path) and for this question we need only know the command itself (though not necessarily either the filename or the path).
+
+8. In the former command, the output of  'echo' (in this case "Hello World") will be output to a file called 'something'. In the latter command, it will be output to the terminal.
+
+9. This will replace the previous file 'something' containing "Hello World" with a new file 'something' containing "more text".
+
+10. This comand will append to the file 'something' such that we will end up with a file containing the text:
+"more text
+yet more text".
+(weird line breaks to demonstrate newlines)

@@ -1,0 +1,5 @@
+Graham Kelly, CSE 374 Assignment 3 Part 4
+
+1. These lines set the axis labels, set the x-axis values, set the output file, and then plot the data we gathered on the y-axis vs. the x values assigned previously.
+
+2. There doesn't seem to be a discernible relationship or trend, except that most sites have a smaller index page regardless of popularity.

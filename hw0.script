@@ -1,0 +1,19 @@
+Script started on Mon 27 Mar 2017 03:47:21 PM PDT
+]0;grahamtk@klaatu:~[?1034h[grahamtk@klaatu ~]$ whoami
+grahamtk
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ echo $SHELL
+/bin/bash
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ pwd
+/homes/grahamtk
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ uname -a
+Linux klaatu.cs.washington.edu 4.4.52-1.el7.elrepo.x86_64 #1 SMP Sun Feb 26 08:48:14 EST 2017 x86_64 x86_64 x86_64 GNU/Linux
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ gcc --version -std=c11
+gcc (GCC) 5.3.1 20160406 (Red Hat 5.3.1-6)
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ exit
+exit
+
+Script done on Mon 27 Mar 2017 03:47:55 PM PDT

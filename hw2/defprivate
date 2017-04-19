@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Graham Kelly, CSE 374 HW2 Problem 2, 4/13/2017
+
+alias private='chmod -R g=u,o-w'

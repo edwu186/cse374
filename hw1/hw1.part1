@@ -1,0 +1,61 @@
+Script started on Tue 04 Apr 2017 11:08:26 AM PDT
+]0;grahamtk@klaatu:~[?1034h[grahamtk@klaatu ~]$ echo P[KHello world
+Hello world
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ passwd
+Changing password for user grahamtk.
+Changing password for grahamtk.
+(current) UNIX password: 
+New password: 
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ date
+Tue Apr  4 11:08:50 PDT 2017
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ # file paths and dir navigation
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ echo ~
+/homes/grahamtk
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ cd ~
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ ls -a
+[0m[38;5;27m.[0m  [38;5;27m..[0m  .bash_history  .bash_logout  .bash_profile  .bashrc  .emacs  hw0.script  hw1.part1  .kshrc  [38;5;27m.mozilla[0m  .zshrc
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ mkdir temp
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ mv temp files
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ cd files
+]0;grahamtk@klaatu:~/files[grahamtk@klaatu files]$ date > now
+]0;grahamtk@klaatu:~/files[grahamtk@klaatu files]$ cp now before
+]0;grahamtk@klaatu:~/files[grahamtk@klaatu files]$ ls -l
+total 8
+-rw-rw-r-- 1 grahamtk grahamtk 29 Apr  4 11:09 before
+-rw-rw-r-- 1 grahamtk grahamtk 29 Apr  4 11:09 now
+]0;grahamtk@klaatu:~/files[grahamtk@klaatu files]$ touch temp
+]0;grahamtk@klaatu:~/files[grahamtk@klaatu files]$ mv temp test
+]0;grahamtk@klaatu:~/files[grahamtk@klaatu files]$ cd ../
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ rm files -r
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ # permissions
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ echo It\'s a secret \[K[K\! > secretfile
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ chmod -w secretfile
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ ls -s[Kl
+total 8
+-rw-rw-r-- 1 grahamtk grahamtk 850 Mar 27 15:47 hw0.script
+-rw-rw-r-- 1 grahamtk grahamtk   0 Apr  4 11:08 hw1.part1
+-r--r--r-- 1 grahamtk grahamtk  15 Apr  4 11:11 secretfile
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ cat 'more text to add ' [K[K[K' >> secretfile 
+bash: secretfile: Permission denied
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ chmor -r[K[K[K[Kd -r secretfile 
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ cat secretfile 
+cat: secretfile: Permission denied
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ uname -r
+4.4.52-1.el7.elrepo.x86_64
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ # proces info [K; above and below
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ ps u
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+grahamtk 17156  0.0  0.0 115392  3132 pts/6    Ss   10:46   0:00 -bash
+grahamtk 17777  0.0  0.0 114152  1972 pts/6    S+   11:08   0:00 script hw1.part1
+grahamtk 17779  0.0  0.0 114156  1176 pts/6    S+   11:08   0:00 script hw1.part1
+grahamtk 17780  0.0  0.0 115400  3300 pts/10   Ss   11:08   0:00 bash -i
+grahamtk 17883  0.0  0.0 151072  3768 pts/10   R+   11:12   0:00 ps u
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ grep grahamtk /etc/passwd[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K#searching
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ grep grahamtk /etc/passwd
+[01;31m[Kgrahamtk[m[K:x:26702:26702::/homes/[01;31m[Kgrahamtk[m[K:/bin/bash
+]0;grahamtk@klaatu:~[grahamtk@klaatu ~]$ exit
+exit
+
+Script done on Tue 04 Apr 2017 11:14:33 AM PDT

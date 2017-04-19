@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+#Graham Kelly, CSE 374 Assignment 2 Part 4, 4/13/17
+
+if [ "$#" -lt 2 ]; then
+   echo "Not enough arguments passed"
+   exit 1
+fi
+
+OUTPUT="$1"
+TOTAL=0
+
+shift
+
+date >> "$OUTPUT"
+
+for v in "$@"; do
+    for f in  "$v"; do
+	lines=`wc -l < "$f"`
+	let TOTAL=TOTAL+lines
+	echo "$lines $(basename $f)" >> "$OUTPUT" #only including basename of file in output!
+    done
+done
+
+echo "$TOTAL total" >> "$OUTPUT"
+exit 0

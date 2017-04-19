@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+#Graham Kelly, CSE 374 Assignment 2 Part 2, 4/13/2017
+
+if [ $# -lt 2 ]; then
+   echo "Insufficient number or arguments passed. Must pass more than two." >&2
+   exit 1
+fi
+
+if [ -e "$1" ]; then
+   echo "Output file $1 already exists. Please pass a valid filename (nonexistent)." >&2
+   exit 1
+fi
+
+OUTPUT="$1"
+
+shift
+
+cat "$@" 2> "$OUTPUT"
+
+if [ ! -s "$OUTPUT" ]; then
+    rm "$OUTPUT"
+fi
+
+exit 0

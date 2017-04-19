@@ -1,0 +1,16 @@
+Graham Kelly, CSE 374 Assignment 2 Part	1, 4/13/2017
+
+1.
+# these commands were all executed in an originally empty directory
+
+echo tweet # self-explanatory
+
+echo tweet > tweet && cat tweet # first cmd makes text file w ‘tweet’, then cat prints this to the screen
+
+ls # we’ve already created the tweet file in the current dir
+
+grep -E ‘tweet’ tweet
+
+alias tweet=‘’ #create alias tweet that does nothing
+tweet #run this alias
+!! #this expands to prev. command (tweet) and then runs it.

@@ -1,0 +1,3 @@
+Graham Kelly, Assignment 3 readme, 4/20/2017
+
+In order to filter out unwanted URLs, I simply used a regular expression that only grabbed URLs in <a> tags that were also in <strong> tags.
