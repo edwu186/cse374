@@ -1,0 +1,64 @@
+Script started on Tue 25 Apr 2017 11:17:47 PM PDT
+]0;grahamtk@klaatu:~/hw4[?1034h[grahamtk@klaatu hw4]$ gdb gasp
+[?1034hGNU gdb (GDB) Red Hat Enterprise Linux 7.11-67.el7
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from gasp...done.
+(gdb) b main
+Breakpoint 1 at 0x4008a5: file gasp.c, line 24.
+(gdb) b 50
+Breakpoint 2 at 0x400a43: file gasp.c, line 50.
+(gdb) run test test.txt
+Starting program: /homes/grahamtk/hw4/gasp test test.txt
+Missing separate debuginfos, use: debuginfo-install glibc-2.17-157.el7_3.1.x86_64
+
+Breakpoint 1, main (argc=3, argv=0x7fffffffdcd8) at gasp.c:24
+warning: Source file is more recent than executable.
+24	  ignore = 0;  // initializing global (ignore case) to 0 (no)
+(gdb) pront[K[K[Kint arv[Kgv[1]
+$1 = 0x7fffffffdfa4 "test"
+(gdb) c
+Continuing.
+
+Breakpoint 2, _process_file (fname=0x7fffffffdfa9 "test.txt", pattern=0x603010 "test") at gasp.c:51
+51	  char line[MAX_LN];  // to store each line of the file
+(gdb) backtrace
+#0  _process_file (fname=0x7fffffffdfa9 "test.txt", pattern=0x603010 "test") at gasp.c:51
+#1  0x00000000004009fb in main (argc=3, argv=0x7fffffffdcd8) at gasp.c:40
+(gdb) lsit[K[K[Kist
+46	  return 0;
+47	}
+48	
+49	int _process_file(char *fname, char *pattern) {
+50	  FILE* file = fopen(fname, "r");  // pointer to file
+51	  char line[MAX_LN];  // to store each line of the file
+52	  int i = 1;
+53	
+54	  if ( !(file) ) {  // if file cannot be opened (might not exist)
+55	    fprintf(stderr, "Unable to open file: %s\n", fname);
+(gdb) print fname
+$2 = 0x7fffffffdfa9 "test.txt"
+(gdb) print file
+$3 = (FILE *) 0x603080
+(gdb) c
+Continuing.
+test test test
+pattern pattern test
+testtesttest
+[Inferior 1 (process 7861) exited normally]
+(gdb) quit
+]0;grahamtk@klaatu:~/hw4[grahamtk@klaatu hw4]$ exit
+exit
+
+Script done on Tue 25 Apr 2017 11:20:22 PM PDT
