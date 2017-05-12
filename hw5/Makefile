@@ -1,3 +1,6 @@
+# Graham Kelly 5/11/2017
+# UW CSE 374: Assignment 5 Makefile
+
 all: autocomplete
 
 autocomplete: main.o trie.o
