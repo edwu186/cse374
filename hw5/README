@@ -1,0 +1,9 @@
+Graham Kelly
+5/11/2017
+Assignment 5: README
+
+I am most happy with the simplicity of my autocomplete/print_tree functions. I was also happy that I was able to create trie without storing full strings (instead I simply stored int flag to denote whether the given node is the end of a valid word).
+
+There really isn't a part of my code in which I lack confidence, however I am least happy about the fact that I was unable to implement compressed trie in EC (ran out of time :( ).
+
+NO EC COMPLETED.
